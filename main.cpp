@@ -15,14 +15,7 @@ const char SCISSORS = 's';
 const char HEADS = 'h';
 const char TAILS = 't';
 
-struct userData
-{
-    string username;
-    string fullLegalName;
-    double depositAm; // before fee
-    double playingAm; // available currency to play with after fees
 
-}data;
 double PlayerBalance ()
 {
     double PlayerBal;
@@ -174,6 +167,18 @@ char chooseWinner(char uChoice, char cChoice) {
 
 int main()
 {
+    
+    
+     struct userData
+    {
+        string username;
+        string fullLegalName;
+        double depositAm; // before fee
+        double playingAm; // available currency to play with after fees
+
+    }data;
+    
+    
     ofstream outfile;
     outfile.open("UserData.txt");
 
